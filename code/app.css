@@ -93,3 +93,25 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
   padding: 20px;
 } 
+
+/* careers =========================================================================================*/
+/*job listing header*/
+.listingheader{
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*job listing styling */
+.listing{
+    /* credit for rounded corners https://www.w3schools.com/css/css3_borders.asp*/
+    border-radius: 15px 50px;
+    border: 10px solid #73AD21;
+    padding: 20px;
+    width: 50%;
+    height: 750px;
+    margin: 0 auto;
+    
+    margin-top: 20px;   
+}
+
+/*=================================================================================================*/
