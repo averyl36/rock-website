@@ -1,17 +1,16 @@
+/* General =============================================== */
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-
 .body-text {
     display: flex;
+    margin: 25px;
     font-family: Arial;
     align-items: center;
     justify-content: center;
-    margin-top: 250px;
 }
-
 .heading {
     color: white;
     text-transform: uppercase;
@@ -19,6 +18,7 @@
     font-size: 20px;
 }
 
+/* Navigation Bar =========================================== */
 nav {
     display: flex;
     justify-content: space-around;
@@ -27,13 +27,11 @@ nav {
     background-color: teal;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .nav-links {
     display: flex;
     justify-content: space-around;
     width: 20%;
 }
-
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -42,20 +40,99 @@ nav {
     font-size: 14xp;
     padding: 14px 16px;
 }
-
 .nav-links li {
     list-style: none;
 }
-
 .nav-links li a.active {
     background-color: darkorange;
 }
-
 .nav-links li a:hover:not(.active) {
     background-color: lightseagreen;
 }
 
-/* contact styles */
+/* Blog ===================================================== */
+/* for the blog article selection page */
+.blog-grid {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px;
+}
+.blog-card {
+    display: flex;
+    margin: 10px;
+    width: 60%;
+    align-items: center;
+    min-height: 200px;
+    min-width: 500px;
+    background-color: teal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.blog-card:hover {
+    background-color: lightseagreen;
+}
+.blog-card-img {
+    height: auto;
+    justify-content: left;
+}
+.blog-card-img img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: left;
+    margin: 10px;
+}
+.blog-info-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.blog-card-title {
+    display: flex;
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+}
+.blog-card-subtitle {
+    display: flex;
+    margin: 10px;
+    color: white;
+}
+
+/* for the individual blog pages */
+.blog-img {
+    height: auto;
+}
+.blog-img img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    margin: 5px;
+}
+.blog-title {
+    display: flex;
+    color: black;
+    font-size: 30px;
+    margin: 5px;
+}
+.blog-subtitle {
+    display: flex;
+    margin: 5px;
+}
+.blog-body {
+    background-color: #F3EBD5;
+    width: 60%;
+    min-width: 300px;
+    box-shadow: 2px 2px 5px 2px gray;
+    margin: 5px;
+}
+.blog-body p {
+    margin: 10px;
+    font-size: 20px;
+}
+
+/* contact styles =========================================== */
 
 label{
     color:Black;
@@ -94,7 +171,7 @@ input[type=submit]:hover {
   padding: 20px;
 } 
 
-/* careers =========================================================================================*/
+/* careers ================================================== */
 /*job listing header*/
 .listingheader{
     margin-top: 10px;
