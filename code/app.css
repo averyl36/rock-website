@@ -99,6 +99,7 @@ nav {
     color: rgb(56, 57, 51);
     margin: 0 15% 0 15%;
     font-family: Verdana;
+    font-size: calc(2px + 1.5vw);
 }
 .home-section-2-button {
     background-color: rgb(56, 57, 51);
