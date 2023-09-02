@@ -1,5 +1,6 @@
 /* General =============================================== */
 *{
+    /*background-color: #FFF8F0;*/
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -22,19 +23,23 @@
 /* Navigation Bar =========================================== */
 nav {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     min-height: 8vh;
     background-color: rgb(56, 57, 51);
     font-family: "Montserrat", sans-serif;
     overflow: hidden;
+    padding: 1em;
 }
-.nav-links {
+.menu {
     display: flex;
-    justify-content: space-around;
-    width: 30%;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.nav-links a {
+.menu a {
     float: left;
     color: white;
     text-decoration: none;
@@ -43,15 +48,17 @@ nav {
     font-size: 14xp;
     padding: 14px 16px;
 }
-.nav-links li {
+.menu li {
     list-style: none;
+    overflow: hidden;
 }
-.nav-links li a.active {
-    background-color: rgb(43, 101, 80);
+.menu li a.active {
+    background-color: #64B6AC;
+
     border-radius: 10px;
 }
-.nav-links li a:hover:not(.active) {
-    background-color: lightseagreen;
+.menu li a:hover:not(.active) {
+    background-color: #104F55;
     border-radius: 10px;
 }
 
@@ -339,3 +346,97 @@ input[type=submit]:hover {
 }
 
 /*=================================================================================================*/
+
+/*Container for menu button  */
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  /*  Creating the menu button */
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 6px;
+    width: 32px;
+    border-radius: 3px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  /*  Adding Functionality to the Hamburger Menu with CSS  */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(45deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+  /*  transforms the hamburger icon into a cross  */
+    transform: rotate(-45deg);
+  }
+
+  /* Making the navbar responsive by CSS Media Queries */
+@media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #9f9a9a;
+      height: 2.5em;
+      padding: 0.5em;
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: black;
+      background-color: #E8E8E8;
+      
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+   
+    }
+  }
